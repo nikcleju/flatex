@@ -18,7 +18,7 @@ def is_input(line):
     '\input{}'.
     """
     #tex_input_re = r"""^\s*\\input{[^}]*}""" # input only
-    tex_input_re = r"""(^[^\%]*\\input{[^}]*})|(^[^\%]*\\include{[^}]*})"""  # input or include
+    tex_input_re = r"""(^[^\%]*\\input{[^}]*})|(^[^\%]*\\include{[^}]*})|(^[^\%]*\\includefrom{[^}]*})"""  # input or include or includefrom
     return re.search(tex_input_re, line)
 
 
